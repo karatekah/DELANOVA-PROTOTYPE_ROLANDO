@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal del Valle: elige tu lote y proyecta la casa prefabricada de tu familia." />
+    <title>Portal del Valle | Tu próximo hogar empieza aquí</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+    <header class="site-header">
+      <a class="company-logo" href="#inicio" aria-label="Inicio Portal del Valle">
+        <img src="DOCUMENTOS/LOGOEMPRESA.jpeg" alt="Logo de la empresa" />
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#lotes">Lotes</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="header-cta" href="#simulador">Cotizar ahora <span aria-hidden="true">→</span></a>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="hero-map" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">RESIDENCIAL · ETAPA I</p>
+          <img class="project-logo" src="DOCUMENTOS/LOGOPROYECTO.jpeg" alt="Portal del Valle" />
+          <h1>El espacio para construir la vida que imaginas.</h1>
+          <p class="hero-text">Elige tu lote en Residencial Portal del Valle y cotiza una casa prefabricada pensada para tu familia.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lotes">Elegir mi lote <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="#proyecto">Conocer el proyecto</a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="Resumen del proyecto">
+          <p class="note-label">Lotes desde</p>
+          <p class="note-price">S/ 12,000<sup>*</sup></p>
+          <p class="note-detail">Desde 76 m² · Etapa I</p>
+          <a href="#lotes">Ver disponibilidad <span aria-hidden="true">↗</span></a>
+        </aside>
+        <p class="hero-disclaimer">*Precio referencial según plano de disponibilidad del 26 de agosto. Sujeto a validación comercial.</p>
+      </section>
+
+      <section class="project-section section" id="proyecto">
+        <div class="section-intro">
+          <p class="eyebrow blue">UN LUGAR QUE CRECE CONTIGO</p>
+          <h2>Tu terreno propio, listo para ser parte de tu historia.</h2>
+        </div>
+        <p class="intro-copy">Portal del Valle es un proyecto residencial conectado con la Panamericana Norte y la Vía de Evitamiento. Un entorno planificado para dar el siguiente paso: tener un lote propio y construir a tu ritmo.</p>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <span class="benefit-icon" aria-hidden="true">⌁</span>
+            <h3>Calles afirmadas</h3>
+            <p>Diseñadas para facilitar tu llegada y recorrido dentro del proyecto.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-icon" aria-hidden="true">✦</span>
+            <h3>Servicios esenciales</h3>
+            <p>El plano contempla servicios de luz y agua para el desarrollo residencial.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-icon" aria-hidden="true">◉</span>
+            <h3>Seguridad 24 h</h3>
+            <p>Acceso y entorno pensados para que tu familia se sienta tranquila.</p>
+          </article>
+          <article class="benefit-card">
+            <span class="benefit-icon" aria-hidden="true">⌂</span>
+            <h3>Entorno con potencial</h3>
+            <p>Con parque, zona educativa, mirador y comercios señalados en el proyecto.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="lots-section section" id="lotes">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow blue">ELIGE TU ESPACIO</p>
+            <h2>Encuentra el lote que se adapta a tu futuro.</h2>
+          </div>
+          <p>Explora el plano y selecciona una alternativa referencial para iniciar tu cotización.</p>
+        </div>
+        <div class="lots-layout">
+          <div class="plan-card">
+            <div class="plan-toolbar">
+              <span><i class="legend-dot available"></i> Disponible</span>
+              <span><i class="legend-dot sold"></i> Vendido</span>
+              <span class="plan-date">Actualizado: 26 ago.</span>
+            </div>
+            <button class="plan-zoom" type="button" id="openPlan" aria-label="Abrir plano de disponibilidad a mayor tamaño">Ampliar plano <span aria-hidden="true">↗</span></button>
+            <img src="assets/plano-disponibilidad-26-agosto.png" alt="Plano de disponibilidad de Residencial Portal del Valle, actualizado el 26 de agosto" />
+            <p class="plan-caption">Plano comercial de referencia. Los colores indican el estado informado en el documento recibido; confirma la disponibilidad con un asesor antes de separar.</p>
+          </div>
+          <div class="lot-selector">
+            <div class="selector-heading">
+              <span class="step-number">1</span>
+              <div><h3>Selecciona un lote</h3><p>Opciones referenciales para tu simulación</p></div>
+            </div>
+            <div class="lot-list" id="lotList" role="radiogroup" aria-label="Lotes de referencia">
+              <button class="lot-option is-selected" type="button" role="radio" aria-checked="true" data-lot="A-01" data-area="82.5" data-price="12000">
+                <span class="lot-code">A-01</span><span class="lot-area">82.5 m²</span><strong>S/ 12,000</strong>
+              </button>
+              <button class="lot-option" type="button" role="radio" aria-checked="false" data-lot="B-06" data-area="90" data-price="14000">
+                <span class="lot-code">B-06</span><span class="lot-area">90 m²</span><strong>S/ 14,000</strong>
+              </button>
+              <button class="lot-option" type="button" role="radio" aria-checked="false" data-lot="C-10" data-area="90" data-price="15000">
+                <span class="lot-code">C-10</span><span class="lot-area">90 m²</span><strong>S/ 15,000</strong>
+              </button>
+              <button class="lot-option" type="button" role="radio" aria-checked="false" data-lot="D-15" data-area="90" data-price="16000">
+                <span class="lot-code">D-15</span><span class="lot-area">90 m²</span><strong>S/ 16,000</strong>
+              </button>
+              <button class="lot-option" type="button" role="radio" aria-checked="false" data-lot="E-24" data-area="90" data-price="18000">
+                <span class="lot-code">E-24</span><span class="lot-area">90 m²</span><strong>S/ 18,000</strong>
+              </button>
+            </div>
+            <p class="selector-note">El prototipo usa alternativas de muestra. La versión productiva conectará cada lote del plano a su ficha, estado y precio en tiempo real.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="calculator-section" id="simulador">
+        <div class="calculator-intro">
+          <p class="eyebrow">PROYECTA TU CASA</p>
+          <h2>Diseña una primera idea de tu hogar.</h2>
+          <p>Personaliza una casa prefabricada para el lote elegido. El resultado es una estimación inicial para conversar con un asesor.</p>
+          <div class="selected-lot-summary"><span>Lote seleccionado</span><strong id="summaryLot">A-01 · 82.5 m²</strong></div>
+        </div>
+        <form class="calculator" id="calculatorForm">
+          <div class="calculator-block">
+            <div class="calculator-label"><span class="step-number">2</span><label>Ambientes</label></div>
+            <div class="counter-grid">
+              <div class="counter-control">
+                <span>Habitaciones</span>
+                <div><button type="button" class="counter-button" data-counter="rooms" data-direction="-1" aria-label="Reducir habitaciones">−</button><output id="roomsValue">2</output><button type="button" class="counter-button" data-counter="rooms" data-direction="1" aria-label="Aumentar habitaciones">+</button></div>
+              </div>
+              <div class="counter-control">
+                <span>Baños</span>
+                <div><button type="button" class="counter-button" data-counter="baths" data-direction="-1" aria-label="Reducir baños">−</button><output id="bathsValue">1</output><button type="button" class="counter-button" data-counter="baths" data-direction="1" aria-label="Aumentar baños">+</button></div>
+              </div>
+              <div class="counter-control">
+                <span>Pisos</span>
+                <div><button type="button" class="counter-button" data-counter="floors" data-direction="-1" aria-label="Reducir pisos">−</button><output id="floorsValue">1</output><button type="button" class="counter-button" data-counter="floors" data-direction="1" aria-label="Aumentar pisos">+</button></div>
+              </div>
+            </div>
+          </div>
+          <fieldset class="calculator-block material-options">
+            <legend><span class="step-number">3</span> Material principal</legend>
+            <label class="material-option is-selected"><input type="radio" name="material" value="Esencial" data-cost="24900" checked /><span><strong>Esencial</strong><small>Estructura funcional y eficiente</small></span><b>Desde S/ 24,900</b></label>
+            <label class="material-option"><input type="radio" name="material" value="Confort" data-cost="34900" /><span><strong>Confort</strong><small>Mejores acabados y aislamiento</small></span><b>Desde S/ 34,900</b></label>
+            <label class="material-option"><input type="radio" name="material" value="Premium" data-cost="44900" /><span><strong>Premium</strong><small>Acabados superiores y mayor detalle</small></span><b>Desde S/ 44,900</b></label>
+          </fieldset>
+          <div class="estimate-card" aria-live="polite">
+            <p>Inversión estimada desde</p>
+            <strong id="estimatePrice">S/ 47,500</strong>
+            <span>Incluye lote y configuración inicial de casa prefabricada.</span>
+          </div>
+          <button class="button button-whatsapp" type="submit"><span aria-hidden="true">◔</span> Recibir cotización por WhatsApp</button>
+          <p class="estimate-disclaimer">Los montos son aproximados y no constituyen una oferta comercial. El presupuesto final depende de evaluación técnica, diseño y acabados.</p>
+        </form>
+      </section>
+
+      <section class="location-section section" id="contacto">
+        <div>
+          <p class="eyebrow blue">CONOCE EL ENTORNO</p>
+          <h2>Todo empieza con una visita.</h2>
+          <p>Coordina una visita y recorre el proyecto, su acceso por la Panamericana Norte y las alternativas de lote disponibles.</p>
+          <a class="button button-primary" href="#simulador">Quiero mi cotización <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="location-card">
+          <span class="location-pin" aria-hidden="true">⌖</span>
+          <h3>Portal del Valle</h3>
+          <p>Acceso por Panamericana Norte y Vía de Evitamiento</p>
+          <div class="location-divider"></div>
+          <small>Mapa interactivo pendiente para la siguiente fase.</small>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="DOCUMENTOS/LOGOEMPRESA.jpeg" alt="Logo de la empresa" />
+      <p>Residencial Portal del Valle · Etapa I</p>
+      <p class="footer-note">Prototipo comercial. Información y precios sujetos a validación.</p>
+    </footer>
+
+    <dialog id="planModal" aria-labelledby="planModalTitle">
+      <div class="modal-top"><h2 id="planModalTitle">Plano de disponibilidad</h2><button id="closePlan" type="button" aria-label="Cerrar plano">×</button></div>
+      <img src="assets/plano-disponibilidad-26-agosto.png" alt="Plano de disponibilidad de Residencial Portal del Valle" />
+      <p>Fuente: plano comercial actualizado al 26 de agosto.</p>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
