@@ -93,6 +93,8 @@ Cada subpágina marca visualmente el ítem activo. En pantalla móvil el menú s
 - La cabecera corporativa utiliza `position: sticky` con `top: 0`; se mantiene visible mientras el visitante recorre cualquiera de las páginas.
 - El logo DELANOVA sobresale ligeramente por encima y debajo de la cabecera, incluye una sombra suave y es más grande para conservar contraste sobre el fondo blanco.
 - En la portada, el logo de Portal del Valle se amplió y elevó dentro del hero, inmediatamente después de la etiqueta `RESIDENCIAL · ETAPA I`, para hacer más legible la identidad del proyecto.
+- El logo DELANOVA de la cabecera se amplió nuevamente a aproximadamente el doble de su tamaño anterior en escritorio; en móvil se conserva una escala contenida para no bloquear el menú.
+- La cabecera conserva una altura fija de 88 px en escritorio; el logo elevado sobresale visualmente sin aumentar esa altura.
 
 ## 5. Funcionalidades existentes
 
@@ -103,6 +105,11 @@ Cada subpágina marca visualmente el ítem activo. En pantalla móvil el menú s
 - Bloque de atributos del proyecto.
 - Plano actualizado con leyenda de disponibilidad/vendido.
 - Modal para ampliar el plano.
+- Sección comercial `Todo lo que necesitas`, con información del plano: seguridad 24 h, calles afirmadas, servicios de agua y luz, tranquera de seguridad, zona educativa, parque recreativo, mirador y paradero.
+- Las tarjetas de atributos alternan azul marino, azul y naranja de la paleta oficial para mejorar contraste y jerarquía visual.
+- Formulario corto dentro de esa sección, preparado para abrir WhatsApp con nombre, teléfono e interés del visitante.
+- Sección `Proyectos destacados` para Portal del Valle y futuras oportunidades DELANOVA.
+- Mensaje institucional de cierre sobre DELANOVA y footer ampliado con enlaces de navegación y espacios para redes sociales.
 
 ### 5.2 Selector de lote y simulador
 
@@ -156,6 +163,8 @@ const ASESOR_WHATSAPP = "51987654321";
 
 Mientras esté vacía, el botón muestra una alerta indicando que falta configurar el número.
 
+El formulario compacto de la portada usa la misma variable y arma un mensaje con el nombre, teléfono e interés del usuario. Los iconos de redes del footer son marcadores visuales (`#`) hasta recibir las URL oficiales de Facebook, Instagram, TikTok y YouTube.
+
 ## 6. Validaciones realizadas
 
 - Se comprobó sintaxis de `app.js` mediante `node --check`.
@@ -205,6 +214,14 @@ Orden sugerido de implementación:
 7. Integrar un plano interactivo con Mapbox o SVG clicable; cada lote debe abrir una ficha detallada.
 8. Agregar analítica de conversiones (por ejemplo, eventos de clic en WhatsApp, formulario y selección de lote) previa aprobación de la política de privacidad.
 9. Añadir páginas legales: política de privacidad, términos y condiciones y cookies.
+
+### Organización actual de las rutas
+
+- La portada (`index.html`) funciona como landing comercial de DELANOVA y ya no muestra visualmente el plano, selector de lotes ni simulador.
+- La selección de lote y el simulador viven en la subpágina del proyecto: `portal-del-valle.html`.
+- Los CTAs principales de la portada y la tarjeta de Portal del Valle en `proyectos.html` enlazan a `portal-del-valle.html`.
+- La sección anterior `Conoce el entorno` fue retirada de la portada según indicación del usuario.
+- `Proyecta tu casa` también fue eliminado del HTML de la portada. El simulador se mantiene únicamente en `portal-del-valle.html`.
 
 ## 10. Criterios de diseño que se deben conservar
 

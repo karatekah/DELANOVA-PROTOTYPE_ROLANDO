@@ -26,6 +26,7 @@ function estimateTotal() {
 }
 
 function updateEstimate() {
+  if (!document.getElementById("roomsValue")) return;
   document.getElementById("roomsValue").textContent = state.rooms;
   document.getElementById("bathsValue").textContent = state.baths;
   document.getElementById("floorsValue").textContent = state.floors;
@@ -65,7 +66,7 @@ document.querySelectorAll('input[name="material"]').forEach((input) => {
   });
 });
 
-document.getElementById("calculatorForm").addEventListener("submit", (event) => {
+document.getElementById("calculatorForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!ASESOR_WHATSAPP) {
     window.alert("Falta configurar el número de WhatsApp del asesor en app.js antes de publicar.");
@@ -85,5 +86,24 @@ const planModal = document.getElementById("planModal");
 document.getElementById("openPlan").addEventListener("click", () => planModal.showModal());
 document.getElementById("closePlan").addEventListener("click", () => planModal.close());
 planModal.addEventListener("click", (event) => { if (event.target === planModal) planModal.close(); });
+
+const quickContactForm = document.getElementById("quickContactForm");
+quickContactForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!ASESOR_WHATSAPP) {
+    window.alert("Falta configurar el número de WhatsApp del asesor en app.js antes de publicar.");
+    return;
+  }
+  const name = document.getElementById("quickName").value.trim();
+  const phone = document.getElementById("quickPhone").value.trim();
+  const interest = document.getElementById("quickInterest").value;
+  const message = [
+    "Hola, quiero recibir información sobre Residencial Portal del Valle.",
+    `Nombre: ${name}`,
+    `Teléfono: ${phone}`,
+    `Interés: ${interest}`,
+  ].join("\n");
+  window.open(`https://wa.me/${ASESOR_WHATSAPP}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+});
 
 updateEstimate();
