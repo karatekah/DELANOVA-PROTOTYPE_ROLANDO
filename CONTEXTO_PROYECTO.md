@@ -231,6 +231,7 @@ Orden sugerido de implementación:
 - Conservar el patrón de cabecera corporativa DELANOVA para todas las futuras páginas.
 - Comunicar siempre como “referencial” cualquier precio, disponibilidad o estimación que no provenga de una fuente comercial vigente.
 - Garantizar compatibilidad móvil antes de publicar cualquier cambio.
+- Mantener el footer corporativo completo (marca, navegación, redes y nota legal) en todas las páginas y subpáginas.
 
 ## 11. Instrucción corta para otro agente
 
